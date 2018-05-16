@@ -31,11 +31,21 @@ class Customer(Person):
         self.__email = email
         self.__balance = balance
         super(Customer, self).__init__(name,email)
+
+    def setName(self, name):
+        self.__name = name
+
     def getName(self):
         return self.__name
 
+    def setEmail(self,email):
+        self.__email = email
+
     def getEmail(self):
         return self.__email
+
+    def setBalance(self, balance):
+        self.__balance = balance
 
     def getBalance(self):
         return self.__balance
@@ -61,6 +71,7 @@ print('Email:',tony.get_email())
 print(tony.toString())
 
 
-#Customer1 = Customer(tony.getName(),tony.getEmail(),0)
-
-print(Customer1.getDebtInfo())
+John = Customer('John Doe','John.Doe@gmail.com',100)
+print(John.getDebtInfo())
+John.setBalance(300)
+print(John.getDebtInfo())
